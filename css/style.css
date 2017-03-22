@@ -1,0 +1,85 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #F9F9F9;
+  margin: 0;
+}
+
+div.userInput {
+  background-color: #30344A;
+  height: 110px;
+  width: 70%;
+  margin: auto;
+  border-radius: 3px;
+  position: relative;
+}
+
+div.form {
+  width: 90%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+label {
+  color: #FFF;
+  font-size: 1.3em;
+}
+
+input.submit {
+  font-size: 1.3em;
+  width: 5em;
+  float: right;
+  margin: 5px 0;
+}
+
+input.userCo-ordinates {
+  height: 20px;
+  font-size: 1em;
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+
+div.results {
+  width: 70%;
+  margin: auto;
+}
+
+ul {
+  -webkit-box-shadow: 3px 3px 13px -5px rgba(128,128,128,1);
+  -moz-box-shadow: 3px 3px 13px -5px rgba(128,128,128,1);
+  box-shadow: 3px 3px 13px -5px rgba(128,128,128,1);
+  background-color: #FFF;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 10px
+  display: inline-block;
+}
+
+img {
+  width: 100px;
+  display: inline-block;
+}
+
+li {
+  list-style-type: none;
+  height: 1.5em
+}
+
+span {
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 2.1em;
+  margin-top: 0;
+  height: 65px;
+  background-color: #37383A;
+  color: #FFF;
+  text-align: left;
+  line-height: 63px;
+  padding-left: 50px;
+}
