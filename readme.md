@@ -8,8 +8,6 @@ From GitHub:
 * Unzip the file.
 * Open the directory and right click on index.html and click 'open in browser'.
 
-Right click on index.html and click 'open in browser'
-
 #### Assumptions
 
 * The minimum number of events is 5
