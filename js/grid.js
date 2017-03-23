@@ -33,7 +33,7 @@ App.makeEvents = function () {
         x: this.coordinates[j].x,
         y: this.coordinates[j].y,
         ticketPrice: (Math.random() * 100).toFixed(2),
-        noTickets: ((Math.random() * 100) + 1).toFixed(0)
+        noTickets: ((Math.random() * (100 - 1)) + 1).toFixed(0)
       };
       this.coordinates[j].taken = true;
       this.eventsArray.push(event);
@@ -51,7 +51,19 @@ App.getUserCoordinates = function (e) {
   this.userCoordinates = $('.userCo-ordinates').val().replace(/ /g,'');
   this.userX = this.userCoordinates.substr(0, this.userCoordinates.indexOf(','));
   this.userY = this.userCoordinates.substr(this.userCoordinates.indexOf(',') + 1);
-  this.distance();
+  this.checkUserCoordinates();
+};
+
+App.checkUserCoordinates = function() {
+  if (this.userX >= -(this.gridSize) && this.userX <= this.gridSize && this.userY >= -(this.gridSize) && this.userY <= this.gridSize) {
+    this.distance();
+  } else {
+    $('.results').append(`
+      <div class="card">
+        <p>Oh no! Your co-ordinates are outside our grid!</p>
+        <p>Make sure both your x and y co-ordinates are with the range -10 and 10.</p>
+      </div>`);
+  }
 };
 
 App.distance = function() {
@@ -90,11 +102,13 @@ App.fiveEvents = function () {
 App.printResults = function () {
   for (var i = 0; i < this.closestEvents.length; i++) {
     $('.results').append(`
+      <div class="card"
       <ul class="event">
       <li><span>Event Number:</span> ${this.closestEvents[i].number}</li>
       <li><span>Price:</span> $${this.closestEvents[i].ticketPrice}</li>
       <li><span>Distance:</span> ${this.closestEvents[i].distance}</li>
       </ul>
+      </div>
       `
     );
   }
