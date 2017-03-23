@@ -6,7 +6,7 @@ From GitHub:
 
 * Click the clone or download button above and click the Download ZIP option. This should download a zipped version of the 'GRID-TEST-master' directory to your downloads folder.
 * Unzip the file.
-* Open the directory and right click on index.html and click 'open in browser'.
+* Open the directory and either double click on index.html file or right click on file and click on the option to 'open in browser'.
 
 #### Assumptions
 
