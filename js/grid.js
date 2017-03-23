@@ -32,8 +32,8 @@ App.makeEvents = function () {
         number: [j][0],
         x: this.coordinates[j].x,
         y: this.coordinates[j].y,
-        ticketPrice: (Math.random() * 100).toFixed(2),
-        noTickets: ((Math.random() * (100 - 1)) + 1).toFixed(0)
+        ticketPrice: (Math.random() * (100 - 0.01) + 0.01).toFixed(2),
+        noTickets: (Math.random() * 100).toFixed(0)
       };
       this.coordinates[j].taken = true;
       this.eventsArray.push(event);
